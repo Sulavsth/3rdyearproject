@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novels</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-gray-900 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div>
+            <a href="./home.html" class="text-white text-2xl font-bold">NeoNovel</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <!-- Adjusted margin for the search bar -->
+            <input type="text" id="navbarSearchInput" class="hidden md:block w-full md:w-96 px-6 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 ml-20" placeholder="Search for books...">            <button class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex m-4 space-x-4">
+            <a href="./home.html" class="text-white">Home</a>
+            <a href="./Novel.html" class="text-white">Novels</a>
+            <a href="#Contact" class="text-white">Contact</a>
+            <a href="#About" class="text-white">About</a>
+        </div>
+    </div>
+</nav>
+<!-- Novel section -->
+    <section class="py-14 px-3 md:px-0">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Novels</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Novel Item -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/the mysterious affair at syles.jpeg" alt="the mysterious affair at styles">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">The mysterious affair</h3>
+                        <p class="mt-2 text-gray-600">Agatha Christie</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/The-Mysterious-Affair-at-Styles.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/The-Mysterious-Affair-at-Styles.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat similar blocks for other novels -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/Laramie.jpeg" alt="Laramie">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Laramie</h3>
+                        <p class="mt-2 text-gray-600">Charles King</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/'Laramie'.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/'Laramie'.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/crime.jpeg" alt="Crime-and-Punishment">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Crime and Punishment</h3>
+                        <p class="mt-2 text-gray-600">Fyodor Dostoyevsky</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/Crime-and-Punishment-.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/Crime-and-Punishment-.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/bloodstone.jpeg" alt="bloodstone">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Bloodstone</h3>
+                        <p class="mt-2 text-gray-600">M.J Mallon</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/Bloodstone-.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/Bloodstone-.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/daown of rebellion.jpeg" alt="rebellion">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Dawn of Rebellion</h3>
+                        <p class="mt-2 text-gray-600">Michelle Lynn</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/Dawn-of-Rebellion.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/Dawn-of-Rebellion.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/death of old git.jpeg" alt="death">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Death of Old Git</h3>
+                        <p class="mt-2 text-gray-600">Andrea Frazer</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/Death-of-an-Old-Git.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/Death-of-an-Old-Git.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/death of young lieutenant.jpeg" alt="death">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Death Young Lieutenant</h3>
+                        <p class="mt-2 text-gray-600">Jake Reynolds</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/Death-of-a-Young-Lieutenant.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/Death-of-a-Young-Lieutenant.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img class="w-full h-48 object-cover lazyload" src="./img/heart.jpeg" alt="heart">
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Healing Her Heart</h3>
+                        <p class="mt-2 text-gray-600">Laura Scott</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="./files/Healing-Her-Heart.pdf" target="_blank" class="text-blue-500 hover:text-blue-700">Read Online</a>
+                            <a href="./files/Healing-Her-Heart.pdf" download class="text-blue-500 hover:text-blue-700">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+ <!-- Premium Novel section -->
+<section class="py-14 px-3 md:px-0 bg-gray-100">
+    <div class="container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Premium Novels</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Premium Novel Item -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img class="w-full h-48 object-cover lazyload" src="./img/may it pleases the court.jpeg" alt="court">
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">May It pleases the Court</h3>
+                    <p class="mt-2 text-gray-600">Daniel Maldonaldo</p>
+                    <p class="mt-2 text-green-600 font-bold">NPR 1,399</p>
+                    <div class="mt-4">
+                        <button onclick="buyNovel('May it pleases the court', 1399)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more premium novel items as needed -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img class="w-full h-48 object-cover lazyload" src="./img/the phantom of opera.jpeg" alt="opera">
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Phantom of Opera</h3>
+                    <p class="mt-2 text-gray-600">Gaston Leroux</p>
+                    <p class="mt-2 text-green-600 font-bold">NPR 1,899</p>
+                    <div class="mt-4">
+                        <button onclick="buyNovel('Phantom of Opera', 1899)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img class="w-full h-48 object-cover lazyload" src="./img/wit of woman.jpeg" alt="wit">
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Wit of Woman</h3>
+                    <p class="mt-2 text-gray-600">Arthur W Marchmont</p>
+                    <p class="mt-2 text-green-600 font-bold">NPR 1,699</p>
+                    <div class="mt-4">
+                        <button onclick="buyNovel('Wit of woman', 1699)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img class="w-full h-48 object-cover lazyload" src="./img/journey to the center of earth.jpeg" alt="journey">
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-bold text-gray-900 hover:underline cursor-pointer">Journey to Center</h3>
+                    <p class="mt-2 text-gray-600">Jules Verne</p>
+                    <p class="mt-2 text-green-600 font-bold">NPR 1,999</p>
+                    <div class="mt-4">
+                        <button onclick="buyNovel('Journey to the center of the earth', 1999)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Checkout Modal -->
+<div id="checkoutModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <h3 class="text-lg font-bold mb-4">Checkout</h3>
+        <form id="checkoutForm">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+            </div>
+            <div class="mb-4">
+                <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Delivery Address</label>
+                <textarea id="address" name="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Payment Method</label>
+                <div>
+                    <input type="radio" id="cod" name="paymentMethod" value="cod" checked>
+                    <label for="cod">Cash on Delivery</label>
+                </div>
+            </div>
+            <div class="mt-4">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Place Order
+                </button>
+                <button type="button" onclick="closeCheckoutModal()" class="ml-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Receipt Modal -->
+<div id="receiptModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <h3 class="text-lg font-bold mb-4">Order Confirmation</h3>
+        <div id="receiptDetails"></div>
+        <div class="mt-4">
+            <button onclick="closeReceiptModal()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+    
+       <!-- Contact Section -->
+<section id="Contact" class="py-14 px-3 md:px-0 m-4 custom-padding custom-margin">
+    <div class="container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <p class="text-lg text-gray-700 mb-4">Have a question or need assistance? Feel free to reach out to us.</p>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Email: info@gmail.com</li>
+                    <li>Phone: 01469856</li>
+                    <li>Address: Kathmandu, Nepal</li>
+                </ul>
+            </div>
+            <div>
+                <form id="contactForm" class="max-w-lg">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Enter your message here..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full">Send Message</button>
+                </form>
+                
+                <script>
+                    $(document).ready(function(){
+                        $('#contactForm').on('submit', function(e){
+                            e.preventDefault(); // Prevent the default form submit
+                            
+                            $.ajax({
+                                type: 'POST',
+                                url: 'contact_form.php',
+                                data: $(this).serialize(),
+                                success: function(response){
+                                    alert('Message sent successfully!');
+                                },
+                                error: function(){
+                                    alert('An error occurred. Please try again.');
+                                }
+                            });
+                        });
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="About" class="py-14 px-6 md:px-10 lg:px-20 xl:px-40 bg-gray-50">
+      <div class="container mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">About NeoNovel</h2>
+          <div class="text-lg text-gray-700 leading-relaxed text-justify">
+              <p class="mb-4">
+                  Neonovel bridges the gap in the market for an enhanced online reading platform, offering a secure and engaging haven for novel readers inspired by extensive research on user experience and community engagement. Whether you're seeking the latest releases, beloved classics, or niche genres, Neonovel has it all. 
+              </p>
+              <p class="mb-4">
+                  Our mission is to revolutionize the way readers experience novels by providing a centralized library with a vast collection of novels across various genres, focusing on free or affordable options while respecting copyright restrictions. We enhance the reading experience with features like downloadable eBooks, online reading options, annotation tools, and personalized recommendations to cater to diverse reading preferences. 
+              </p>
+              <p>
+                  Additionally, Neonovel fosters a vibrant community where readers can connect, discuss their favorite novels, share theories, and participate in collaborative reading experiences. Our platform boasts an extensive collection of novels from different genres and authors, a user-friendly interface for easy navigation across desktops, tablets, or mobile devices, and customization options for font sizes, background themes, and reading modes.
+              </p>
+          </div>
+      </div>
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-7">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-3 m-4 md:mb-0">
+                    <h3 class="text-lg md:text-xl font-semibold">NeoNovel</h3>
+                    <p class="text-sm text-gray-400">Read and download volumes for free.</p>
+                </div>
+                <ul class="flex m-4 space-x-3">
+                    <li><a href="./home.html" class="text-sm text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="./Novel.html" class="text-sm text-gray-400 hover:text-white">Novels</a></li>
+                    <li><a href="#Contact" class="text-sm text-gray-400 hover:text-white">Contact</a></li>
+                    <li><a href="#About" class="text-sm text-gray-400 hover:text-white">About</a></li>
+                </ul>
+            </div>
+            <div class="mt-6 md:mt-8 m-4 border-t border-gray-700 pt-3">
+                <p class="text-xs md:text-sm text-gray-400">&copy; 2024 NeoNovel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentNovel = { title: '', price: 0 };
+        let orders = []; // This will simulate our database of orders
+    
+        function buyNovel(title, price) {
+            currentNovel = { title, price };
+            const checkoutModal = document.getElementById('checkoutModal');
+            checkoutModal.classList.remove('hidden');
+        }
+    
+        function closeCheckoutModal() {
+            const checkoutModal = document.getElementById('checkoutModal');
+            checkoutModal.classList.add('hidden');
+        }
+    
+        function closeReceiptModal() {
+            const receiptModal = document.getElementById('receiptModal');
+            receiptModal.classList.add('hidden');
+        }
+    
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+            
+            // Generate a random order number
+            const orderNumber = Math.floor(Math.random() * 1000000);
+            
+            // Create order object
+            const order = {
+                orderNumber,
+                name,
+                email,
+                address,
+                phone,
+                item: currentNovel.title,
+                price: currentNovel.price,
+                paymentMethod: 'Cash on Delivery',
+                total: currentNovel.price,
+                date: new Date().toLocaleString()
+            };
+    
+            // Save order (In a real application, this would be sent to a server)
+            orders.push(order);
+            console.log('Order saved:', order);
+    
+            // Generate PDF receipt
+            generatePDFReceipt(order);
+    
+            closeCheckoutModal();
+        });
+    
+        function generatePDFReceipt(order) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+    
+            doc.setFontSize(20);
+            doc.text('Order Receipt', 105, 15, null, null, 'center');
+    
+            doc.setFontSize(12);
+            doc.text(`Order Number: #${order.orderNumber}`, 20, 30);
+            doc.text(`Date: ${order.date}`, 20, 40);
+            doc.text(`Name: ${order.name}`, 20, 50);
+            doc.text(`Email: ${order.email}`, 20, 60);
+            doc.text(`Address: ${order.address}`, 20, 70);
+            doc.text(`Phone: ${order.phone}`, 20, 80);
+            doc.text(`Item: ${order.item}`, 20, 90);
+            doc.text(`Price: NPR ${order.price.toFixed(2)}`, 20, 100);
+            doc.text(`Payment Method: ${order.paymentMethod}`, 20, 110);
+            doc.text(`Total: NPR ${order.total.toFixed(2)}`, 20, 120);
+    
+            // Save the PDF
+            doc.save(`receipt_${order.orderNumber}.pdf`);
+    
+            // Display success message
+            const receiptModal = document.getElementById('receiptModal');
+            const receiptDetails = document.getElementById('receiptDetails');
+            receiptDetails.innerHTML = `
+                <p>Your order has been placed successfully!</p>
+                <p>Order Number: #${order.orderNumber}</p>
+                <p>A PDF receipt has been downloaded to your device.</p>
+            `;
+            receiptModal.classList.remove('hidden');
+        }
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('navbarSearchInput');
+        searchInput.addEventListener('input', searchBooks);
+    });
+    
+    function searchBooks() {
+        const searchInput = document.getElementById('navbarSearchInput');
+        const searchTerm = searchInput.value.toLowerCase();
+        const bookItems = document.querySelectorAll('.bg-white.shadow-md.rounded-lg');
+    
+        bookItems.forEach(item => {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            const author = item.querySelector('p').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || author.includes(searchTerm)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>
